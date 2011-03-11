@@ -6,3 +6,6 @@ template:
 build_dir: .build
 commit:
   branch: master
+push:
+  - origin build
+  - origin master
