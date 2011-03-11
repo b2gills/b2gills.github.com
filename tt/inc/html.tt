@@ -1,0 +1,27 @@
+[%
+
+USE Date;
+year_start = 2011;
+year = Date.format(Date.now,'%Y');
+
+IF year == year_start;
+  year_list = year;
+ELSE;
+  year_list = [year_start,year];
+END;
+
+-%]
+<html>
+  <head>
+    <title>[% template.title %]</title>
+  </head>
+  <body>
+[%-
+
+PROCESS $template | indent(4)
+
+-%]
+    <hr />
+    &copy; Copyright [% year_list.join('-') %] Brad Gilbert
+  </body>
+</html>

@@ -1,0 +1,8 @@
+---
+template:
+  base: tt
+  include: tt/include
+  data: data.yml
+build_dir: .build
+commit:
+  branch: master

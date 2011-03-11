@@ -1,0 +1,9 @@
+<h2>Stack Exchange accounts</h2>
+  <ul>[%
+  FOR stackexchange;
+  url = "http://${key}.com/users/$value/brad-gilbert" FILTER lower;
+%]
+    <li><a href="[% url %]">[% key %]</a></li>[%
+  END;
+%]
+  </ul>

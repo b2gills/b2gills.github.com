@@ -1,0 +1,22 @@
+[%~
+
+META title = "Brad Gilbert's GitHub Page";
+
+include_list = [
+  'cpan',
+  'stackexchange',
+  'other',
+]
+
+%]
+<h1><a href="[%head_url%]">[% template.title %]</a></h1>
+<hr />
+[%
+
+FOR item IN include_list;
+  IF $item;
+    INCLUDE "inc/${item}.tt" | indent(2);
+  END;
+END;
+
+-%]

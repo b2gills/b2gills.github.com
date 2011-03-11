@@ -1,0 +1,10 @@
+---
+head_url: https://github.com/b2gills
+cpan:
+  JSON-RPC-LWP:
+    GitHub: https://github.com/b2gills/JSON-RPC-LWP
+    Wiki:   https://github.com/b2gills/JSON-RPC-LWP/wiki
+    Issues: https://github.com/b2gills/JSON-RPC-LWP/issues
+stackexchange:
+  StackOverflow: 1337
+  Meta.StackOverflow: 1337

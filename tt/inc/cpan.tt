@@ -1,0 +1,24 @@
+<h2>CPAN Modules</h2>
+  <ul>[%
+
+  FOR index IN cpan;
+  dist = index.key;
+  web = index.value;
+  cpan_url = "http://search.cpan.org/dist/$dist";
+
+%]
+    <li><h3><a href="[% cpan_url %]">[% dist %]</a></h3>
+      <ul>
+        <li><a href="[% cpan_url %]">CPAN</a></li>[%
+
+    FOR web;
+%]
+        <li><a href="[%value%]">[%key%]</a></li>[%
+    END;
+
+%]
+      </ul>[%
+  END;
+%]
+    </li>
+  </ul>

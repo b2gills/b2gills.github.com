@@ -1,0 +1,8 @@
+<h1>See Also</h1>
+  <ul>[%
+  FOR other;
+%]
+    <li><a href="[% url %]">[% key %]</a></li>[%
+  END;
+%]
+  </ul>
