@@ -1,5 +1,9 @@
 ---
 head_url: https://github.com/b2gills
+include_list:
+  - cpan
+  - stackexchange
+  - other
 cpan:
   JSON-RPC-LWP:
     GitHub: https://github.com/b2gills/JSON-RPC-LWP
