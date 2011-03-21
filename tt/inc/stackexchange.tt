@@ -1,9 +1,24 @@
-<h2>Stack Exchange accounts</h2>
-  <ul>[%
-  FOR stackexchange;
-  url = "http://${key}.com/users/$value/brad-gilbert" FILTER lower;
+<h2>Stack Exchange accounts</h2>[%
+
+  urlname = name.split(' ').join('-');
+
+  FOR elem IN stackexchange;
+  FOR elem;
+
+  sitename = key.remove('\.com$').replace('\.',' ');
+  url = "http://${key}.com/users/$value/$urlname" FILTER lower;
+  alt = "profile for $name at $sitename";
+  flair_url = "http://${key}.com/users/flair/${value}.png" FILTER lower;
 %]
-    <li><a href="[% url %]">[% key %]</a></li>[%
+  <a href="[%url%]"><img
+    src="[%flair_url%]"
+    width="208"
+    height="58"
+    alt="[%alt%]"
+    title="[%alt%]"
+  /></a><br>[%
+
+  END;
   END;
 %]
-  </ul>
+</table>
